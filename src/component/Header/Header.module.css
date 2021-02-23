@@ -1,0 +1,10 @@
+li
+{
+  text-decoration: none;
+  list-style-type: none;
+}
+li:hover , li:focus{
+  background-color : white;
+  transition: transform .2s;
+  transform: scale(1.8)
+}
