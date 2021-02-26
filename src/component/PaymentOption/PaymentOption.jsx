@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles({
-  root : {width : 345, margin : "10px"},
+  root : { margin : "10px" , maxWidth : 282},
   media : {height : 140,},
 
 })
@@ -45,7 +45,7 @@ function PaymentOption() {
   ]
 
   var mappedContent = cards.map((item , index )=>(
-    <div className="card-area">
+    <div className="card-area cards">
     <Card className={classes.root} key={index}>
       <CardActionArea>
         <CardMedia className={classes.media} image={item.images} title={item.title}/>
