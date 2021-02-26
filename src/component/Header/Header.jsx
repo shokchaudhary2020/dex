@@ -27,22 +27,26 @@ function Header() {
       </li>
       <li name="register" className="rounded">
         <Tooltip title="Register User" arrow="arrow">
-          <Link to="/registration"><PersonAddIcon/></Link>
+          {/* <Link to="/registration"><PersonAddIcon/></Link> */}
+          <Link to="/"><PersonAddIcon/></Link>
         </Tooltip>
       </li>
       <li name="payment" className="rounded">
         <Tooltip title="Payment Options" arrow="arrow">
-          <Link to="/payment"><PaymentIcon/></Link>
+          {/* <Link to="/payment"><PaymentIcon/></Link> */}
+          <Link to="/"><PaymentIcon/></Link>
         </Tooltip>
       </li>
       <li name="wallet" className="rounded">
         <Tooltip title="Rahi Wallet" arrow="arrow">
-          <Link to="/wallet"><AccountBalanceWalletIcon/></Link>
+          <Link to="/"><AccountBalanceWalletIcon/></Link>
+          {/* <Link to="/wallet"><AccountBalanceWalletIcon/></Link> */}
         </Tooltip>
       </li>
       <li name="login" className="rounded">
         <Tooltip title="Login for Owner" arrow="arrow">
-          <Link to="/login"><SupervisorAccountIcon/></Link>
+          {/* <Link to="/login"><SupervisorAccountIcon/></Link> */}
+          <Link to="/"><SupervisorAccountIcon/></Link>
         </Tooltip>
       </li>
     </div>
