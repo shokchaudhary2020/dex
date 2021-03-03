@@ -17,7 +17,7 @@ export default function DescriptionAlerts() {
     <div className={classes.root}>
       <Alert severity="error">
         <AlertTitle>Stop</AlertTitle>
-        Wallet has been  completed. Wait for <strong>Authentication approx time 72 hours</strong>
+        Wallet is completed. <strong>(Under review work......)</strong>
       </Alert>
     </div>
   );
