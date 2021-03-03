@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Tooltip from '@material-ui/core/Tooltip';
 import styles from './Header.module.css';
 import cx from 'classnames';
@@ -11,8 +11,12 @@ import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
 import {Button} from 'antd';
 import {Link} from 'react-router-dom';
 import {useState} from 'react';
+import {Context} from '../Context/CreateContext';
 
 function Header() {
+  var [state] = useContext(Context);
+  let defaultPassword = state.defaultPassword;
+
   return (<nav className="flex items-center bg-gray-800 flex-wrap">
     <div className="flex items-center h-10 w-full p-1 m-6 bg-gray-800 justify-between bg-white">
       {/* <button><MenuIcon/></button> */}
@@ -27,26 +31,32 @@ function Header() {
       </li>
       <li name="register" className="rounded">
         <Tooltip title="Register User" arrow="arrow">
-          {/* <Link to="/registration"><PersonAddIcon/></Link> */}
-          <Link to="/"><PersonAddIcon/></Link>
+          {
+            state.password === defaultPassword ?
+            <Link to="/registration"><PersonAddIcon/></Link>
+            :
+            <Link to="/"><PersonAddIcon/></Link>
+          }
         </Tooltip>
       </li>
       <li name="payment" className="rounded">
         <Tooltip title="Payment Options" arrow="arrow">
-          {/* <Link to="/payment"><PaymentIcon/></Link> */}
-          <Link to="/"><PaymentIcon/></Link>
+          {
+            state.password === defaultPassword ?
+            <Link to="/payment"><PaymentIcon/></Link>
+             :
+             <Link to="/"><PaymentIcon/></Link>
+          }
         </Tooltip>
       </li>
       <li name="wallet" className="rounded">
         <Tooltip title="Rahi Wallet" arrow="arrow">
-          <Link to="/"><AccountBalanceWalletIcon/></Link>
-          {/* <Link to="/wallet"><AccountBalanceWalletIcon/></Link> */}
-        </Tooltip>
-      </li>
-      <li name="login" className="rounded">
-        <Tooltip title="Login for Owner" arrow="arrow">
-          {/* <Link to="/login"><SupervisorAccountIcon/></Link> */}
-          <Link to="/"><SupervisorAccountIcon/></Link>
+          {
+            state.password === defaultPassword ?
+            <Link to="/wallet"><AccountBalanceWalletIcon/></Link>
+             :
+             <Link to="/"><AccountBalanceWalletIcon/></Link>
+          }
         </Tooltip>
       </li>
     </div>
