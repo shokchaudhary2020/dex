@@ -11,9 +11,10 @@ export default function MainComponent() {
       {
       <Switch>
         <Route exact path="/" component={Login}/>
-        <Route path="/registration" component={RegisterUser}/>
-        <Route path="/payment" component={PaymentOption}/>
-        <Route path="/wallet" component={Wallet}/>
+        <Route path="/registration" component={Login}/> 
+        {/* RegisterUser PaymentOption Wallet*/}
+        <Route path="/payment" component={Login}/>
+        <Route path="/wallet" component={Login}/>
       </Switch>
     }
     </main>

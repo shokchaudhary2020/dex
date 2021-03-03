@@ -4,6 +4,7 @@ import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button';
 import WarningAlerts from '../Alerts/Alerts';
 import {Link} from 'react-router-dom';
+import Alerts from '../Alerts/Alerts';
 import './Login.module.css'
 
 import {Context} from '../Context/CreateContext';
@@ -24,7 +25,7 @@ function Login() {
 
   var defaultPassword = state.defaultPassword;
 
-  const [warning , setWarning] = useState(false)
+  const [warning , setWarning] = useState(true)  // slight change here 
   const [password , setPassword]  = useState('');
 
   function warningSetter()
@@ -55,10 +56,10 @@ function Login() {
     setPassword(e.target.value);
 
 
-    if(e.target.value === defaultPassword)
-    {
-      setWarning(false);
-    }
+    // if(e.target.value === defaultPassword)
+    // {
+    //   setWarning(false);
+    // }
   }
 
 
