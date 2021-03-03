@@ -10,6 +10,7 @@ import Slide from '@material-ui/core/Slide';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import LinearBuffer from '../Loading/Loading';
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -61,9 +62,11 @@ export  function AlertDialogSlide(props) {
           <Button onClick={handleClose} color="primary" disabled={true}>
             Disagree
           </Button>
+          <Link to="/wallet">
           <Button onClick={handleClose} color="primary">
             Agree
           </Button>
+        </Link>
         </DialogActions>
       </Dialog>
     </div>
@@ -74,6 +77,7 @@ var loading = false;
 
 export  function ValidationTextFields(props) {
   console.log(props)
+
 
   function handleButtonClick()
   {
