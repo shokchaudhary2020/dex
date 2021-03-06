@@ -17,7 +17,7 @@ export default function DescriptionAlerts() {
     <div className={classes.root}>
       <Alert severity="error">
         <AlertTitle>Stop</AlertTitle>
-        Wallet is completed. <strong>(Under review work......)</strong>
+        Wallet is completed. <strong>(Wait for some time......)</strong>
       </Alert>
     </div>
   );
